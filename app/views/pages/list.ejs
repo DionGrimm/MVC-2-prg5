@@ -1,0 +1,19 @@
+<h1 class="display-4">Posts</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% posts.forEach((post) => { %>
+            <tr>
+                <td><%= post.id %></td>
+                <td><%= post.title %></td>
+                <td></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

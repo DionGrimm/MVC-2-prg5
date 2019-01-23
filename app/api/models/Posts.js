@@ -23,7 +23,14 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
+    title: {
+      type: 'string'
+    },
+    body: {
+      type: 'string'
+    }
   },
+  datastore: 'default'
 
 };
 
