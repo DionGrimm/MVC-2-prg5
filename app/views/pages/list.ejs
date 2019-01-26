@@ -12,7 +12,12 @@
             <tr>
                 <td><%= post.id %></td>
                 <td><%= post.title %></td>
-                <td></td>
+                <td>
+                    <a href="/posts/edit/<%= post.id %>" class="btn btn-primary">Edit</a>
+                    <form action="/posts/delete/<%= post.id %>" method="post" class="d-inline">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                </td>
             </tr>
         <% }) %>
     </tbody>
