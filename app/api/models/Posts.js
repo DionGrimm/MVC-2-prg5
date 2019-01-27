@@ -7,6 +7,8 @@
 
 module.exports = {
 
+  schema: true,
+
   attributes: {
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
@@ -24,10 +26,24 @@ module.exports = {
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
     title: {
-      type: 'string'
+      type: 'string',
+      unique: true,
+      required: true,
+      maxLength: 50,
+      minLength: 1
     },
     body: {
+      type: 'string',
+      required: true,
+      maxLength: 1000,
+      minLength: 1
+    },
+    author: {
       type: 'string'
+    },
+    status: {
+      type: 'boolean',
+      defaultsTo: true
     }
   },
   datastore: 'default'

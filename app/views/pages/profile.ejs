@@ -1,0 +1,9 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/user/list">Users</a></li>
+    <li class="breadcrumb-item active"><%= user.name %></li>
+</ol>
+<h1 class="display-4"><%= user.name %></h1>
+<form action="/user/update/<%= session.User.id %>" method="post" class="d-inline">
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+    <input type="submit" value="Become Admin" class="btn btn-primary">
+</form>

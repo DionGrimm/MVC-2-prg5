@@ -12,5 +12,14 @@
         <label for="body">Body</label>
         <textarea name="body" class="form-control"></textarea>
     </div>
+    <input type="hidden" name="author" value="<%= session.User.name %>" />
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
     <input type="submit" value="Submit" class="btn btn-primary">
 </form>
+<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach((error) => { %>
+    <li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>

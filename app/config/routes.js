@@ -21,8 +21,14 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   'post /posts/delete/:id':'postsController.delete',
+  'post /posts/toggle/:id':'postsController.toggle',
   'get /posts/edit/:id':'postsController.edit',
   'post /posts/update/:id':'postsController.update',
+  'post /user/delete/:id':'UserController.delete',
+  'post /user/update/:id':'UserController.update',
+  'get /user/profile/:id':'UserController.profile',
+  'get /posts/view/:id':'PostsController.view',
+
 
 
   /***************************************************************************
