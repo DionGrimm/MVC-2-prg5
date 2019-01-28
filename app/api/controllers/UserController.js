@@ -21,9 +21,9 @@ module.exports = {
                         res.send(500, {error: 'Database Error'})
                     }
                     user.posts = posts.length
-                    sails.log(user.posts)
+                    //sails.log(user.posts)
                 })
-                sails.log(user.posts)
+                //sails.log(user.posts)
             })
             res.view("pages/users", {users:users})
         })
